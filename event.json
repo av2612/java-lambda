@@ -1,0 +1,12 @@
+{
+  "body-json": {},
+  "params": {
+    "path": {
+    },
+    "querystring": {
+      "name": "Aakash"
+    },
+    "header": {
+    }
+  }
+}
