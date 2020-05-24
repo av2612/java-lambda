@@ -25,20 +25,20 @@ To create a new bucket for deployment artifacts, run `1-create-bucket.sh`.
 # Deploy
 To deploy the application, run `2-deploy.sh`.
 
-    java-basic$ ./2-deploy.sh
+    java-lambda$ ./2-deploy.sh
     BUILD SUCCESSFUL in 1s
     Successfully packaged artifacts and wrote output template to file out.yml.
     Waiting for changeset to be created..
-    Successfully created/updated stack - java-basic
+    Successfully created/updated stack - java-lambda
 
 This script uses AWS CloudFormation to deploy the Lambda functions and an IAM role. If the AWS CloudFormation stack that contains the resources already exists, the script updates it with any changes to the template or function code.
 
 You can also build the application with Maven. To use maven, add `mvn` to the command.
 
-    java-basic$ ./2-deploy.sh mvn
+    java-lambda$ ./2-deploy.sh mvn
     [INFO] Scanning for projects...
     [INFO] -----------------------< com.example:java-basic >-----------------------
-    [INFO] Building java-basic-function 1.0-SNAPSHOT
+    [INFO] Building java-lambda-function 1.0-SNAPSHOT
     [INFO] --------------------------------[ jar ]---------------------------------
     ...
 
@@ -76,4 +76,4 @@ Deploy the change, and then use the invoke script to test the new configuration.
 # Cleanup
 To delete the application, run `4-cleanup.sh`.
 
-    java-basic$ ./4-cleanup.sh
+    java-lambda$ ./4-cleanup.sh
