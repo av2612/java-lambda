@@ -1,7 +1,6 @@
 # Basic function with minimal dependencies (Java)
 
-![Architecture](/sample-apps/java-basic/images/sample-java-basic.png)
-
+# Architecture
 The project source includes function code and supporting resources:
 - `src/main` - A Java function.
 - `template.yml` - An AWS CloudFormation template that creates an application.
