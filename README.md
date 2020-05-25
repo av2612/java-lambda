@@ -53,26 +53,6 @@ To invoke the function, run `3-invoke.sh`.
     "Hello Aakash"
 
 
-# Configure Handler Class
-
-By default, the function uses a handler class named `Handler` that takes a map as input and returns a string. The project also includes handlers that use other input and output types. These are defined in the following files under src/main/java/example:
-
-- `Handler.java` – Takes a `Map<String> as input.
-To use a different handler, change the value of the Handler setting in the application template (`template.yml` or `template-mvn.yaml`). For example, to use the list handler:
-
-    Properties:
-      CodeUri: target/java-lambda-1.0-SNAPSHOT.jar
-      Handler: example.HandlerList
-
-Deploy the change, and then use the invoke script to test the new configuration. For handlers, that don't take a JSON object as input, pass the type (`string`, `int` or `list`) as an argument to the invoke script.
-
-    ./3-invoke.sh list
-    {
-        "StatusCode": 200,
-        "ExecutedVersion": "$LATEST"
-    }
-    9979
-
 # Cleanup
 To delete the application, run `4-cleanup.sh`.
 
