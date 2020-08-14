@@ -28,7 +28,11 @@ public class Handler implements RequestHandler<Map, String>{
         Map queryString = (Map) params.getOrDefault("querystring"
                 , new HashMap<String, Map>());
 
-        String 7987878 = new String("Hello " + queryString.get("name"));
+        String a = new String("Hello " + queryString.get("name"));
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        while(true){
+            a.add(1);
+        }
         return response;
     }
 }
